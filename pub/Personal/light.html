@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A Stoplight!</title>
+
+<style>
+.red {
+    background-color: blue;
+}
+.yellow{
+    background-color: blueviolet;
+}
+.green{
+    background-color: purple;
+}
+div {
+    width:100px;
+    height:100px;
+}
+</style>
+</head>
+<body>
+<div class="red" id="my_div1"></div>
+<div class="yellow" id="my_div2"></div>
+<div class="green" id="my_div3"></div>
+
+<script>
+function changeColors(element_name){
+    v = document.getElementById(element_name);
+    console.log(v);
+    if (v.classList.contains("red")){
+        v.classList.remove("red");
+        v.classList.add("green");
+    }
+    else if (v.classList.contains("yellow")){
+        v.classList.remove("yellow");
+        v.classList.add("red");
+    }
+    else{
+        v.classList.remove("green");
+        v.classList.add("yellow");
+    }
+}
+
+function changeAllColors(){
+    changeColors("my_div1");
+    changeColors("my_div2");
+    changeColors("my_div3");
+}
+
+setInterval(changeAllColors, 250);
+//changeAllColors();
+</script>
+</body>
+
+</html>

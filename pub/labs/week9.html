@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Week 9 lab">
+    <meta name="author" content="Ian Miller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+    <h1 id="X">10</h1>
+
+    <button onclick="increment(1)">increment</button>
+    <button onclick="square( counter * counter)">square</button>
+   
+    <script>
+    let counter= 10 ;
+
+function increment(to_add){
+    
+    counter = counter + to_add;
+    document.getElementById("X").innerHTML = counter;
+}
+
+function square(to_add){
+    counter = counter * counter;
+    document.getElementById("X").innerHTML = counter;
+
+}
+
+
+</script>
+
+</body>
+

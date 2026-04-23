@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Order up </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Week 10 lab">
+    <meta name="author" content="Ian Miller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+    <h1 id="Next">Now Serving: </h1>
+    <p id="line"></p>
+    <form id="myform" onsubmit="queue(event)">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" ><br>
+  <Button type="submit">Add Person</Button>
+</form>
+<button id="pop" onclick="remove()">Order up</button>
+
+<script>
+    let new_list=[];
+
+function queue(event){
+    event.preventDefault();
+    let formData = new FormData(event.target);
+    let names = formData.get("fname");
+    new_list.push(names);
+    document.getElementById("line").innerHTML = new_list + "<br>";
+    }
+
+    function remove(){
+        let last = new_list.shift();
+        line = new_list[0];
+        document.getElementById("line").innerText=new_list;
+        document.getElementById("Next").innerHTML = "Now Serving: " + last;
+        
+
+
+    }
+
+</script>
+</body>
+

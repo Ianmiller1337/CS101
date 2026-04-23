@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>FizzBuzz</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Week 11 site">
+    <meta name="author" content="Ian Miller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <style> 
+    .red {
+        color: red;
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="header"> </h1>
+    <form onsubmit="fizzBuzz(event)">
+  <label for="thenumber">Give me a number </label><br>
+  <input type="number" id="thenumber" name="thenumber"><br>
+  <button type="submit">Submit!</button>
+</form>
+   
+<script>
+function isDivide(num){
+    let remainder = num % 3;
+    if (remainder == 0){
+        return true;
+    }
+}
+function fizzBuzz(event){
+    event.preventDefault();
+    let formData = new FormData(event.target);
+    let input = formData.get("thenumber");
+    if (input % 3 == 0 && input % 5 == 0){
+        document.getElementById("header").innerHTML = "Fizzbuzz";
+    }
+        else if (input % 3 == 0){
+            document.getElementById("header").innerHTML = "Fizz"
+        }
+
+    else if (input % 5 == 0){
+        document.getElementById("header").innerHTML = "Buzz"
+    }
+
+    else {
+        document.getElementById("header").classList.add("red");
+        document.getElementById("header").innerHTML = input
+    }
+}
+
+</script>
+</body>

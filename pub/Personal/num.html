@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Making Decisions</title>
+
+<style>
+.myclass {
+    color:blueviolet;
+}
+
+.oddclass{
+    color:brown;
+}
+</style>
+</head>
+<body>
+<h1 id="topheader">I have a cool webpage!</h1>
+<p id="responses"></p>
+
+<form onsubmit="process(event)">
+    <label for="thenumber">Give me a #:</label>
+    <input type="number" id="thenumber" name="thenumber">
+    <br>
+    <label for="thename">What is your name:</label>
+    <input type="name" id="thename" name="thename">
+    <input type="submit">
+</form>
+<script>
+function isBig(num){
+    return num > 10;
+}
+function isTen(num){
+    return num == 10;
+}
+function isEven(num){
+    let remainder = num % 2;
+    if (remainder == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function process(event){
+    event.preventDefault();
+    let formData = new FormData(event.target);
+    let input = formData.get("thenumber");
+    if (formData.get("thename").trim().toLowerCase() == "scott"){
+        document.getElementById("responses").innerHTML = "We don't serve your kind here, fella.";
+    }
+    else if (input > 10){
+        document.getElementById("responses").innerHTML = "That's a good number! I like the number " + input;
+    }
+    else if(input >= 0){
+        document.getElementById("responses").innerHTML = "The number " + input + " is kinda mid";
+    }
+    else {
+        document.getElementById("responses").innerHTML = "The number " + input + " is total garbage, I hope you don't sleep tonight thinking about how you chose such a bad number";
+    }
+
+    if (isEven(input)){
+        document.getElementById("responses").classList.add("myclass");
+        document.getElementById("responses").classList.remove("oddclass");
+    }
+    else{
+        document.getElementById("responses").classList.add("oddclass");
+        document.getElementById("responses").classList.remove("myclass");
+        
+    }
+}
+
+document.getElementById("topheader").classList.add("myclass");
+</script>
+</body>
+
+</html>
