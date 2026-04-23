@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not So Epic Games!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="back">
+        <nav>
+            <a href="main.html">
+            <img src="imgs/NSEG.png" class="logo" >
+            </a>
+            <ul>
+                <li ><a href="main.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="dev.html">Developers</a></li>
+
+
+            </ul>
+            <a href="store.html">
+            <button >Shop Now!</button>
+            </a>
+            </nav>
+            <div>
+
+                <h1 style="text-align: center; color: white;">Recommended for you!</h1>
+            </div>
+            <br>
+
+            <div class="games">
+            <h3 class="header2">HellDivers II</h3>
+            <br>
+            <p class="desc"> </p>
+            <img class="pict" src="imgs/helldivers.jpg">
+            <p class="para"> The Galaxy’s Last Line of Offence. <br> Enlist in the Helldivers and join the fight for freedom <br>across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.</p>
+            <br>
+            <p class="pict"><strong> $39.99 </strong></p>
+            <button onclick="cart(event)">Add To Cart</button>
+            <br>
+            </div>
+                
+            <div class="games">
+            <h3 class="header2">Halo: The Master Chief Collection</h3>
+            <br>
+            <p class="desc"> </p>
+            <img class="pict" src="imgs/halo.jpg">
+            <p class="para"> For the first time, the series that changed console gaming forever comes to PC<br> with six blockbuster games in one epic experience. This bundle includes all <br>titles in the collection that will be delivered over time, beginning now with <br>Halo: Reach and ending with Halo 4 in 2020.</p>
+            <br>
+            <!-- Regular striek through not working so i had to add a span on the sales price -->
+            <p class="pict"><strong>Was  <span style='text-decoration: line-through;'>$39.99</span>   <br> Now $9.99 </strong></p>
+            <button onclick="cart(event)">Add To Cart</button>
+            <br>
+            </div>
+
+            <div class="games">
+            <h3 class="header2">Crimson Desert</h3>
+            <br>
+            <p class="desc"> </p>
+            <img class="pict" src="imgs/cimson.jpg">
+            <p class="para">Crimson Desert is an open-world action-adventure set on the continent of Pywel.<br> Join Kliff on his journey to rebuild the Greymane faction<br> and to save the land from a looming threat. From vast wilderness and cities to ruins <br>and the mysterious Abyss, forge your path through battles and discovery.</p>
+            <br>
+            <p class="pict"><strong> $69.99 </strong></p>
+            <button onclick="cart(event)">Add To Cart</button>
+            <br>
+            </div>
+
+            <div class="games">
+            <h3 class="header2">ARC Raiders</h3>
+            <br>
+            <p class="desc"> </p>
+            <img class="pict" src="imgs/arc.jpg">
+            <p class="para"> ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth,<br> ravaged by a mysterious mechanized threat known as ARC.</p>
+            <br>
+            <p class="pict"><strong> $39.99 </strong></p>
+            <button onclick="cart(event)">Add To Cart</button>
+            <br>
+            </div>
+
+
+    </div>
+
+
+</body>
+<script>
+        function cart(event){
+            event.preventDefault()
+            alert("You have added this item to your cart")
+
+        }
+
+</script>
+</html>

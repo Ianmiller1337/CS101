@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not So Epic Games!</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+
+</head>
+<body>
+
+    <div class="back">
+        <nav>
+            <a href="main.html">
+            <img src="imgs/NSEG.png" class="logo" >
+            </a>
+            <ul>
+                <li ><a href="main.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="dev.html">Developers</a></li>
+
+
+            </ul>
+            <a href="store.html">
+            <button >Shop Now!</button>
+            </a>
+             </ul>
+            
+            </nav>
+            <!-- This is the contact info displayed on page -->
+             <div class="dev">
+                <h1 class="header1">If you need to contact support, <br> Reach our via this form!</h1>
+
+                <form  id="my_form" class="dev_form" onsubmit="dev_submit(event)"> 
+                    <h2 id="new_info"></h2>
+                    <div style="display: flex; justify-content: center;">
+                    <label for="Dev">Name: </label>
+                    <input type="text" name="dev" id="dev">
+                    </div>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                    <label for="email"> Email: </label>
+                    <input type="text" name="email" id="email">
+                    <label for="phone">Phone #: </label>
+                    <input type="number" name="phone" id="phone" placeholder="(xxx) xxx-xxxx">
+                    </div>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                    <label for="name"> Username: </label>
+                    <input type="text" name="name" id="name" >
+                    <label for="contact"> Contact Method: </label>
+                    <select id="method" name="method">
+                    <option> Text </option>
+                    <option> Call </option>
+                    <option> Email </option>
+                        </select>
+                        </div>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                        <label for="issue"> Briefly Describe your problem here </label>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                    <input class="area" type="text" name="issue" id="issue" >
+                        <br>
+                        </div>
+                        <div style="display: flex; justify-content: center; border: 2px solid pink;">
+
+                        <button type="submit" >Submit Issue!</button>
+                        </div>    
+                        
+                    
+
+
+                </form>
+
+
+
+
+            </div>
+    </div>
+
+
+
+
+</body>
+
+<script>
+        function dev_submit(event){
+                event.preventDefault();
+                document.getElementById("my_form").innerHTML = "Thank you for reaching out to support" + "<br>" + "A member of support will be with you shortly!";
+                
+
+
+        }
+
+
+
+
+</script>
+
+
+
+
+</html>

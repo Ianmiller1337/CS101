@@ -1,0 +1,345 @@
+   *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        font-family: sans-serif;
+
+        }
+        /* This is the background of the site "vh" stands for viewport height*/
+    .back{
+        min-height: 100vh;
+        background: url(imgs/mainbackground.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+    }
+    nav{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 98%;
+        margin: auto;
+        padding: 2px 0;
+        border-bottom: 2px solid white;
+
+    }
+    .logo{
+
+        width: 100px;
+        padding: 0;
+    }
+
+    /* This controls the list inside the nav element*/
+    nav ul{
+        display: flex;
+        align-items: center;
+
+    }
+
+    /*This controls the indiviual items inside the UL element*/
+    nav ul li{
+        margin: 0 20px;
+
+
+    }
+
+    nav ul li a{
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    nav ul li a:hover{
+        color: pink;
+        border-bottom: 2px solid pink;
+
+    }
+
+
+    /*I used W3 schools to find the REM measurment meaning root element this uses the font size of the root element */
+    nav button{
+        padding: 11px 35px;
+        border: 2px solid white;   
+        background: transparent;
+        border-radius: 2rem;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: .3s;
+        text-emphasis-color: white;
+
+    }
+    /*The transition elemement above extends this to make it look smooth */
+    /*This allows me to make the shop now button look animated and glow when hovered over */
+    nav button:hover{
+        border-color: pink; 
+        color: pink;
+        box-shadow: 0 0 20px pink;
+        scale: .8;
+
+
+    }
+
+    .content {
+        position: absolute;
+        top: 35%;
+        left: 90px;
+    }
+    h2{
+        color: white;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    p{
+
+        font-size: 15px;
+        margin-top: 10px;
+        color: white;
+    }
+
+    .content button{
+        margin-top: 30px;
+        padding: 12px 45px;
+        background: white;
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: .3s;
+
+    }
+
+    .content button:hover{
+        border-color: pink; 
+        color: pink;
+        box-shadow: 0 0 20px pink;
+        scale: 1.1;
+    }
+
+
+     .content button.more{
+        border: 2px solid white;
+        color: white;
+        background: transparent;
+        margin-left: 25px;
+        transition: .3s;
+    }
+    .content button.more:hover{
+        border-color: pink; 
+        color: pink;
+        box-shadow: 0 0 20px pink;
+        scale: 1.1;
+
+    }
+  
+
+    .game{
+        
+        align-content: center;
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+        min-width: 50vh;
+        margin: auto;
+        max-width: 1000px;
+         
+
+
+    }
+
+    .pict{
+        align-self: center;
+
+    }
+        
+
+
+
+    
+
+    .header2, .para{
+        
+        color: black;
+           
+
+    }
+    .desc{
+        text-align: right;
+        color: black;
+
+    }
+    
+    /* This is the border that seperates the reviews i used margin to give space */
+   .reviews{
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+        min-width: 50vh;
+        margin: 10px;
+         
+
+
+    }
+    .header2, .para{
+        text-align: center;
+        color: black;
+           
+
+    }
+        /* By using a grid i can center the form on the screen as well as keep the line breaks. I found this much easier and uses less code than a flex box*/
+    .dev{
+        display: grid;
+        place-items: center; 
+        min-height: 50vh;
+        margin: 0;
+       
+        
+        
+        
+
+    }
+
+    .dev_form{
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+
+
+    }
+
+    .header1{
+        text-align: center;
+        color: white;
+
+    }
+     .contact{
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+        min-width: 50vh;
+        margin: 10px;
+         
+
+
+    }
+    .header2, .para{
+        text-align: center;
+        color: whitesmoke;
+           
+
+    }
+    .dev{
+        display: grid;
+        place-items: center; 
+        min-height: 50vh;
+        margin: 0;
+       
+        
+        
+        
+
+    }
+
+    .dev_form{
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+
+
+    }
+
+    .header1{
+        text-align: center;
+        color: white;
+
+    }
+    .area{
+        min-height: 300px;
+        max-height: 800px;
+        min-width: 600px;
+        max-width: 1000px;
+
+
+    }
+ .tile{
+        display: flex;
+        margin-top: 30px;
+        gap: 20px;
+    }
+    .tile img{
+        width: 180px;
+        border: 2px solid white;
+        border-radius: .5rem;
+        transition: .3s;
+    }
+
+    .tile img:hover{
+        border-color: pink;
+        scale: 1.2;
+        box-shadow: 0 0 20 pink;
+
+    }
+ .header2, .para{
+        text-align: center;
+        color: black;
+           
+
+    }
+     .games{
+        
+        align-content: center;
+        padding: 5px;
+        border: 5px solid white;
+        border-radius: 2rem;
+         background: pink;
+        opacity: .8;
+        min-width: 50vh;
+        margin: auto;
+        max-width: 1000px;
+         
+
+
+    }
+
+    .pict{
+        align-self: center;
+        color: black;
+
+    }
+        
+
+
+
+    
+
+    .header2, .para{
+        
+        color: black;
+           
+
+    }
+    .desc{
+        text-align: right;
+        color: black;
+
+    }
+
+
+
